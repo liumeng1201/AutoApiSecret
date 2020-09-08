@@ -42,10 +42,10 @@ jobs:
       run: | 
         echo `date +"%Y-%m-%d %H:%M:%S"` begin 1 run > time.log
         python 2.py
-        echo `date +"%Y-%m-%d %H:%M:%S"` end 1 run > time.log
-        echo `date +"%Y-%m-%d %H:%M:%S"` begin 2 run > time.log
+        echo `date +"%Y-%m-%d %H:%M:%S"` end 1 run >> time.log
+        echo `date +"%Y-%m-%d %H:%M:%S"` begin 2 run >> time.log
         python 2.py
-        echo `date +"%Y-%m-%d %H:%M:%S"` end 2 run > time.log
+        echo `date +"%Y-%m-%d %H:%M:%S"` end 2 run >> time.log
     - name: Delete secrets config #删除机密
       run: | 
         rm -f 2.py
